@@ -3,6 +3,7 @@
   margin: 0;
   border: 0;
 }
+
 *,
 *:before,
 *:after {
@@ -10,10 +11,12 @@
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
 }
+
 :focus,
 :active {
   outline: none;
 }
+
 a:focus,
 a:active {
   outline: none;
@@ -39,6 +42,7 @@ body {
   -moz-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
 }
+
 input,
 button,
 textarea {
@@ -48,25 +52,31 @@ textarea {
 input::-ms-clear {
   display: none;
 }
+
 button {
   cursor: pointer;
   background-color: transparent;
 }
+
 button::-moz-focus-inner {
   padding: 0;
   border: 0;
 }
+
 a,
 a:visited {
   text-decoration: none;
   color: inherit;
 }
+
 a:hover {
   text-decoration: none;
 }
+
 ul li {
   list-style: none;
 }
+
 img {
   vertical-align: top;
 }
@@ -85,6 +95,7 @@ h6 {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
+
   img {
     display: none;
   }
@@ -99,6 +110,7 @@ a {
   background-image: linear-gradient(102.58deg, $start 37.16%, $end 103.86%);
   position: relative;
   z-index: 100;
+
   &:before {
     background-image: linear-gradient(102.58deg, $start 37.16%, $end 103.86%);
     content: "";
@@ -112,6 +124,7 @@ a {
     z-index: -100;
     transition: opacity $transTime;
   }
+
   &:hover {
     &:before {
       opacity: 1;
@@ -125,6 +138,6 @@ $b: 320px;
 
 @mixin adaptive-value($property, $startSize, $minsize, $type) {
   $addsize: $startSize - $minsize;
-    //работает в любом случаи
-    #{$property}: calc(#{$minsize + px} + #{$addsize} * ((#{$a} - #{$b}) / #{1400 - 320}));
+  //работает в любом случаи
+  #{$property}: calc(#{$minsize + px} + #{$addsize} * ((#{$a} - #{$b}) / #{1400 - 320}));
 }
